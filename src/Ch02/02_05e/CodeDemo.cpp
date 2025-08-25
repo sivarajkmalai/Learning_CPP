@@ -3,6 +3,7 @@
 // Type inference with auto, by Eduardo Corpeño 
 
 #include <iostream>
+#include <string>
 #include <typeinfo>
 
 int main(){
