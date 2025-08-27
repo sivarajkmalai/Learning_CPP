@@ -1,11 +1,36 @@
+📌 .vscode/tasks.json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C/C++: g++-10 build all cpp files",
+      "type": "shell",
+      "command": "/usr/bin/g++-10",
+      "args": [
+        "-g",
+        "-std=c++17",
+        "${fileDirname}/*.cpp",
+        "-o",
+        "${fileDirname}/program"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
+
+📌 .vscode/launch.json
 {
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++: Single g++-10 build and debug active file",
+      "name": "C/C++: g++-10 build and debug all cpp files",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "program": "${fileDirname}/program",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
@@ -24,7 +49,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "C/C++: g++-10 build active file",
+      "preLaunchTask": "C/C++: g++-10 build all cpp files",
       "miDebuggerPath": "/usr/bin/gdb"
     }
   ]
