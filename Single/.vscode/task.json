@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C/C++: g++-10 build all cpp files",
+      "type": "shell",
+      "command": "/usr/bin/g++-10",
+      "args": [
+        "-g",
+        "-std=c++17",
+        "${fileDirname}/*.cpp",
+        "-o",
+        "${fileDirname}/program"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
